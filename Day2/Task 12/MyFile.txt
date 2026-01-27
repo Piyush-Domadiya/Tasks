@@ -1,0 +1,4 @@
+Hello,
+ Python! 
+How are you? 
+this is a sample text file.
