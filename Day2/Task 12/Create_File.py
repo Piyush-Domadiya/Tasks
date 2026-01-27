@@ -6,3 +6,5 @@ with open("MyFile.txt", "w") as f:
     f.write("this is a sample text file.")
 
 f.close()
+
+f = open("MyFile1.txt", "x")
