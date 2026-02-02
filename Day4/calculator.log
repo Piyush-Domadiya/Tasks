@@ -1,0 +1,36 @@
+INFO:root:called Dividing 4.0 and 2.0 = 2.0
+INFO:root:called subtract() with arguments 5.0 and 6.0 , Result: -1.0
+2026-01-29 15:41:51,129 - called divide() with arguments 45.0 and 35.0 , Result: 1.2857142857142858
+2026-01-29 15:42:19,249 - called Division by zero attempted!
+2026-01-29 15:44:34,417 - Invalid input 6
+2026-01-29 15:51:20,107 - INFO - called divide() with arguments 12.0 and 4.0 , Result: 3.0
+2026-01-29 15:51:41,600 - ERROR - called Division by zero attempted!
+2026-01-29 15:53:22,211 - INFO - called divide() with arguments 34.0 and 2.0 , Result: 17.0
+2026-01-29 15:54:03,413 - ERROR - error Division by zero 
+2026-01-29 16:00:11,009 - ERROR - error Division by zero 
+2026-01-29 16:01:35,025 - ERROR - error Division by zero 
+Traceback (most recent call last):
+  File "d:\Piyush Domadiya\Day4\calculator.py", line 20, in divide
+    logging.info(f"called divide() with arguments {x} and {y} , Result: {x / y}")
+                                                                         ~~^~~
+ZeroDivisionError: float division by zero
+2026-01-29 16:02:11,969 - INFO - called divide() with arguments 8.0 and 2.0 , Result: 4.0
+2026-01-29 16:02:43,509 - WARNING - Invalid choice 7
+2026-01-29 16:04:43,565 - INFO - Calculator started.
+2026-01-29 16:04:52,840 - INFO - called add() with arguments 4.0 and 6.0 , Result: 10.0
+2026-01-29 16:05:59,879 - INFO - Calculator started.%(asctime)s
+2026-01-29 16:10:42,016 - INFO - called divide() with arguments 74.0 and 45.0 , Result: 1.6444444444444444
+2026-01-29 16:10:43,704 - INFO - User exiting the calculator.
+2026-01-29 16:10:57,387 - INFO - Calculator started.
+
+2026-01-29 16:11:24,911 - INFO - called add() with arguments 4.0 and 3.0 , Result: 7.0
+2026-01-29 16:12:10,957 - INFO - called subtract() with arguments 4.0 and 2.0 , Result: 2.0
+2026-01-29 16:12:20,639 - INFO - called multiply() with arguments 4.0 and 3.0 , Result: 12.0
+2026-01-29 16:12:29,193 - INFO - called divide() with arguments 4.0 and 2.0 , Result: 2.0
+2026-01-29 16:15:03,770 - INFO - Calculator started.
+2026-01-29 16:15:07,624 - WARNING - Invalid input for numbers.
+2026-01-29 16:17:02,544 - INFO - Calculator started.
+2026-01-29 16:17:05,308 - WARNING - could not convert string to float: 'df'
+2026-01-29 17:13:49,315 - WARNING - could not convert string to float: '& C:/Users/Dell/AppData/Local/Microsoft/WindowsApps/python3.11.exe "d:/Piyush Domadiya/Day4/1Knapsack Problem.py"'
+2026-01-29 17:13:58,628 - INFO - called multiply() with arguments 34.0 and 34.0 , Result: 1156.0
+2026-01-29 17:14:00,795 - INFO - User exiting the calculator.
