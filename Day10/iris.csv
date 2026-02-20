@@ -1,0 +1,41 @@
+name,age,city,course,marks,grade,attendance,passed
+Aarav,20,Mumbai,Python,85,A,92,Yes
+Priya,21,Delhi,Data Science,78,B,88,Yes
+Rohit,22,Bangalore,Web Dev,45,D,60,No
+Sneha,20,Pune,Python,92,A+,95,Yes
+Vikram,23,Hyderabad,AI/ML,67,C,75,Yes
+Ananya,21,Chennai,Data Science,88,A,90,Yes
+Arjun,22,Jaipur,Web Dev,34,F,45,No
+Kavya,20,Mumbai,Python,91,A+,93,Yes
+Deepak,24,Delhi,AI/ML,72,B,80,Yes
+Meera,21,Bangalore,Data Science,55,C,65,No
+Raj,23,Pune,Web Dev,81,A,87,Yes
+Ishita,20,Hyderabad,Python,96,A+,98,Yes
+Karan,22,Chennai,AI/ML,63,C,70,Yes
+Pooja,21,Mumbai,Data Science,74,B,82,Yes
+Sahil,23,Delhi,Web Dev,40,D,50,No
+Nisha,20,Jaipur,Python,89,A,91,Yes
+Aditya,22,Bangalore,AI/ML,58,C,68,No
+Riya,21,Pune,Data Science,83,A,86,Yes
+Manish,24,Hyderabad,Web Dev,47,D,55,No
+Tanvi,20,Chennai,Python,94,A+,96,Yes
+Amit,23,Mumbai,AI/ML,76,B,84,Yes
+Divya,21,Delhi,Data Science,69,C,73,Yes
+Rahul,22,Jaipur,Web Dev,38,F,48,No
+Shruti,20,Bangalore,Python,87,A,89,Yes
+Varun,24,Pune,AI/ML,71,B,79,Yes
+Neha,21,Hyderabad,Data Science,82,A,85,Yes
+Piyush,22,Ahmedabad,Python,95,A+,97,Yes
+Simran,20,Chennai,Web Dev,52,C,62,No
+Harsh,23,Mumbai,AI/ML,66,C,74,Yes
+Anjali,21,Delhi,Data Science,90,A+,94,Yes
+Kunal,22,Bangalore,Web Dev,43,D,53,No
+Swati,20,Pune,Python,88,A,90,Yes
+Nikhil,24,Jaipur,AI/ML,61,C,69,Yes
+Kritika,21,Hyderabad,Data Science,79,B,83,Yes
+Gaurav,23,Chennai,Web Dev,36,F,47,No
+Pallavi,20,Mumbai,Python,93,A+,95,Yes
+Tushar,22,Delhi,AI/ML,70,B,78,Yes
+Bhavna,21,Bangalore,Data Science,84,A,88,Yes
+Siddharth,24,Pune,Web Dev,49,D,58,No
+Komal,20,Ahmedabad,Python,97,A+,99,Yes
