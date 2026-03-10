@@ -1,4 +1,6 @@
 venv/
 __pycache__/
+*.dll
+*.pyd
 *.h5
 *.pyc
