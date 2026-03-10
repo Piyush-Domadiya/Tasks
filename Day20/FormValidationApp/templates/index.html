@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Comparison & Validation App</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-background">
+        <div class="bg-blob blob-1"></div>
+        <div class="bg-blob blob-2"></div>
+        <div class="bg-blob blob-3"></div>
+    </div>
+
+    <div class="container">
+        <header class="header">
+            <div class="logo">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                    <polyline points="14 2 14 8 20 8"></polyline>
+                    <polyline points="9 15 11 17 15 12"></polyline>
+                </svg>
+            </div>
+            <h1>Form Validation Engine</h1>
+            <p class="subtitle">Upload the original template and the filled form to detect missing fields instantly.</p>
+        </header>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loading-overlay">
+            <div class="spinner"></div>
+            <p>Analyzing forms...</p>
+        </div>
+
+        <section class="upload-section" id="upload-section">
+            <form id="compare-form" class="upload-grid">
+
+                <!-- Original Form Upload -->
+                <div class="upload-card" id="drop-original">
+                    <div class="upload-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                    </div>
+                    <h2>Original Empty Form</h2>
+                    <p>Contains the gray highlighted required fields</p>
+                    <label for="original_form" class="upload-btn">Choose PDF</label>
+                    <input type="file" id="original_form" name="original_form" accept=".pdf" hidden>
+                    <div class="file-name" id="original-name">No file selected</div>
+                </div>
+
+                <!-- Filled Form Upload -->
+                <div class="upload-card" id="drop-filled">
+                    <div class="upload-icon filled-icon">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
+                        <div class="check-badge">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3"
+                                stroke-linecap="round" stroke-linejoin="round">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                    <h2>Filled Form</h2>
+                    <p>Completed version of the form</p>
+                    <label for="filled_form" class="upload-btn">Choose PDF</label>
+                    <input type="file" id="filled_form" name="filled_form" accept=".pdf" hidden>
+                    <div class="file-name" id="filled-name">No file selected</div>
+                </div>
+
+            </form>
+
+            <button type="submit" form="compare-form" class="compare-btn" id="compare-btn" disabled>
+                <span class="btn-text">Compare & Validate</span>
+                <span class="btn-loader"></span>
+            </button>
+        </section>
+
+        <section class="results-section" id="results-section" style="display: none;">
+            <!-- Legend -->
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="legend-color red"></div>
+                    <span>Missing / Empty Field</span>
+                </div>
+            </div>
+
+            <!-- Result Image -->
+            <div class="result-image-wrapper">
+                <img id="result-image" src="" alt="Comparison Result">
+            </div>
+
+            <!-- Missing Fields Summary -->
+            <div class="analysis-summary">
+                <h2>Analysis Results</h2>
+
+                <div id="summary-card" class="summary-card">
+                    <div class="summary-header">
+                        <svg class="error-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <line x1="12" y1="8" x2="12" y2="12"></line>
+                            <line x1="12" y1="16" x2="12.01" y2="16"></line>
+                        </svg>
+                        <h3 id="summary-text">X missing field(s) detected</h3>
+                    </div>
+                    <ul class="missing-list" id="missing-list">
+                        <!-- List populated by JS -->
+                    </ul>
+                </div>
+            </div>
+
+            <button class="compare-btn reset-btn" id="reset-btn">Analyze Another Form</button>
+            <a id="debug-link" href="#" target="_blank"
+                style="display:none;text-align:center;color:#a29bfe;margin-top:12px;font-size:0.9rem;">🔍 View Debug:
+                See detected boxes</a>
+        </section>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>
